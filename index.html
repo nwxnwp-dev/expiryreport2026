@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>รายงานคอมพิวเตอร์หมดสัญญาเช่า ปี 2569</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&display=swap');
+        @page { size: A4 landscape; margin: 0; }
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #eef2f3;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* เปลี่ยนเป็น flex-start เพื่อให้เลื่อนลงได้ */
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        .a4-container {
+            width: 297mm;
+            min-height: 210mm; /* เปลี่ยนจากล็อกความสูง เป็นความสูงขั้นต่ำ */
+            background-color: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 30px 40px; /* ลด padding ลงเล็กน้อยให้พอดีหน้า */
+            box-sizing: border-box;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .a4-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 10px;
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-top: 5px;
+        }
+        h1 {
+            color: #1e3c72;
+            margin: 0 0 3px 0;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        p.subtitle {
+            color: #7f8c8d;
+            margin: 0;
+            font-size: 14px;
+        }
+        .badge {
+            background-color: #e74c3c;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        th {
+            background-color: #f4f6f7;
+            color: #2c3e50;
+            padding: 10px;
+            text-align: left;
+            font-weight: 700;
+            border-bottom: 2px solid #bdc3c7;
+        }
+        td {
+            padding: 7px 10px; /* ลด padding ช่องตารางลงเล็กน้อย */
+            border-bottom: 1px solid #ecf0f1;
+            color: #34495e;
+            vertical-align: middle;
+        }
+        tr:hover {
+            background-color: #fdfefe;
+        }
+        .model-name {
+            font-weight: 700;
+            color: #2980b9;
+        }
+        .serial-num {
+            font-size: 11px;
+            color: #7f8c8d;
+            background: #f0f3f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 2px;
+        }
+        .user-name {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 13px;
+        }
+        .branch {
+            font-size: 11px;
+            color: #e67e22;
+            font-weight: bold;
+        }
+        .contact-info {
+            font-size: 11px;
+            color: #7f8c8d;
+        }
+        .date-text {
+            font-weight: bold;
+            color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="a4-container">
+        <div class="header">
+            <div>
+                <h1>IT Equipment Lease Expiry Report</h1>
+                <p class="subtitle">รายงานสรุปรายการคอมพิวเตอร์และอุปกรณ์ที่กำลังจะหมดสัญญาเช่า ประจำปี พ.ศ. 2569</p>
+            </div>
+            <div>
+                <span class="badge">ข้อมูลอัปเดตล่าสุด</span>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th width="5%">No.</th>
+                    <th width="22%">อุปกรณ์ / Serial Number</th>
+                    <th width="20%">แผนก / ตำแหน่ง</th>
+                    <th width="25%">สาขา : ชื่อผู้ใช้งาน</th>
+                    <th width="18%">ข้อมูลติดต่อ</th>
+                    <th width="10%">หมดสัญญา</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><span class="model-name">MacBook Pro</span><br><span class="serial-num">S/N: HW174KLVMK</span></td>
+                    <td>SGMK<br><span class="contact-info">(คุณแพท)</span></td>
+                    <td><span class="branch">SFC SGMK</span><br><span class="user-name">Narumon Luttho</span></td>
+                    <td>084 914 6108<br><span class="contact-info">Graphic-center@seefahgroup.com</span></td>
+                    <td class="date-text">31 พ.ค. 69</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><span class="model-name">iMac</span><br><span class="serial-num">S/N: C02HR0JPQ6X3</span></td>
+                    <td>SGMK<br><span class="contact-info">(คุณโดส)</span></td>
+                    <td><span class="branch">SFC SGMK</span><br><span class="user-name">Anirut Panrat</span></td>
+                    <td>064 196 6919<br><span class="contact-info">Anirut.P@seefahgroup.com</span></td>
+                    <td class="date-text">31 ก.ค. 69</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><span class="model-name">NB : HP 440 G10</span><br><span class="serial-num">S/N: 5CD322H9ZF</span></td>
+                    <td>Kitchen Support (PTY)<br><span class="contact-info">(คุณปู)</span></td>
+                    <td><span class="branch">SFL SLHQ</span><br><span class="user-name">Lalita Chairangsee</span></td>
+                    <td>081 665 4272<br><span class="contact-info">lalita.c@seefahgroup.com</span></td>
+                    <td class="date-text">24 ส.ค. 69</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><span class="model-name">NB : HP 440 G10</span><br><span class="serial-num">S/N: 5CD322HB6Q</span></td>
+                    <td>PUR (PTY)<br><span class="contact-info">(คุณเฟิร์น)</span></td>
+                    <td><span class="branch">SFL SLHQ</span><br><span class="user-name">Sasinan Lamduan</span></td>
+                    <td>092 923 5496<br><span class="contact-info">sasinan.l@seefahgroup.com</span></td>
+                    <td class="date-text">24 ส.ค. 69</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><span class="model-name">NB : HP 440 G10</span><br><span class="serial-num">S/N: 5CD3236TKQ</span></td>
+                    <td>Admin (PTY)<br><span class="contact-info">(คุณไอติม)</span></td>
+                    <td><span class="branch">SFL SLHQ</span><br><span class="user-name">Apiradee Jomfon</span></td>
+                    <td>095 242 1566<br><span class="contact-info">apiradee.j@seefahgroup.com</span></td>
+                    <td class="date-text">24 ส.ค. 69</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><span class="model-name">NB : HP 440 G10</span><br><span class="serial-num">S/N: 5CD3236TKB</span></td>
+                    <td>Executive Sous Chef<br><span class="contact-info">(คุณกอล์ฟ)</span></td>
+                    <td><span class="branch">SFL GT21</span><br><span class="user-name">Thamphon Bannprasert</span></td>
+                    <td>097 153 9029<br><span class="contact-info">thamphon.b@seefahgroup.com</span></td>
+                    <td class="date-text">24 ส.ค. 69</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><span class="model-name">NB : HP 440 G10</span><br><span class="serial-num">S/N: 5CD322HB1Z</span></td>
+                    <td>Asst. F&B Manager<br><span class="contact-info">(คุณหนิง)</span></td>
+                    <td><span class="branch">SFL GSRW</span><br><span class="user-name">Niruebol Kongrut</span></td>
+                    <td>084 973 8004<br><span class="contact-info">niruebol.k@seefahgroup.com</span></td>
+                    <td class="date-text">24 ส.ค. 69</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><span class="model-name">NB : HP 440 G10</span><br><span class="serial-num">S/N: 5CD322HB38</span></td>
+                    <td>Banquet<br><span class="contact-info">(Banquet)</span></td>
+                    <td><span class="branch">SFL GSRW</span><br><span class="user-name">Thanaphum Banquet</span></td>
+                    <td>086 662 1416<br><span class="contact-info">banquet.srw@seefahgroup.com</span></td>
+                    <td class="date-text">24 ส.ค. 69</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><span class="model-name">NB : HP 440 G10</span><br><span class="serial-num">S/N: 5CD322HB4M</span></td>
+                    <td>Hostess<br><span class="contact-info">(Hostess)</span></td>
+                    <td><span class="branch">SFL GSRW</span><br><span class="user-name">Wanna Pongkume</span></td>
+                    <td>096 185 4447<br><span class="contact-info">host.gsrw@seefahgroup.com</span></td>
+                    <td class="date-text">24 ส.ค. 69</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><span class="model-name">NB : HP 440 G10</span><br><span class="serial-num">S/N: 5CD322HB56</span></td>
+                    <td>-<br><span class="contact-info">(-)</span></td>
+                    <td><span class="branch">-</span><br><span class="user-name">-</span></td>
+                    <td>-<br><span class="contact-info">-</span></td>
+                    <td class="date-text">24 ส.ค. 69</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td><span class="model-name">NB : HP 440 G10</span><br><span class="serial-num">S/N: 5CD322HB74</span></td>
+                    <td>Restaurant Mgr.<br><span class="contact-info">(Hostess)</span></td>
+                    <td><span class="branch">SFL GSRW</span><br><span class="user-name">Supachai Teimaitai</span></td>
+                    <td>086 886 6998<br><span class="contact-info">bangrakgrill@seefahgroup.com</span></td>
+                    <td class="date-text">24 ส.ค. 69</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td><span class="model-name">NB : HP 440 G10</span><br><span class="serial-num">S/N: 5CD3236TGY</span></td>
+                    <td>Sous<br><span class="contact-info">(โน๊ต)</span></td>
+                    <td><span class="branch">SFL GSRW</span><br><span class="user-name">Atthasak Khaiboon</span></td>
+                    <td>096 690 4595<br><span class="contact-info">bangrakgrill@seefahgroup.com</span></td>
+                    <td class="date-text">24 ส.ค. 69</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td><span class="model-name">NB : HP 440 G10</span><br><span class="serial-num">S/N: 5CD3236TKT</span></td>
+                    <td>-<br><span class="contact-info">(คุณมนต์)</span></td>
+                    <td><span class="branch">SFL GSRW</span><br><span class="user-name">Lumduan Soyjit</span></td>
+                    <td>085 458 6367<br><span class="contact-info">host.gsrw@seefahgroup.com</span></td>
+                    <td class="date-text">24 ส.ค. 69</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
